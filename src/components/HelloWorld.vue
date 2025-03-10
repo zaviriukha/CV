@@ -19,22 +19,21 @@ const data = ref({
     "Over 6 years of professional experience in Front-end development. For over 2 years have been doing front-end development based on the Vue.js framework. Prior to that, worked on the development of sites for CMS ModX Revolution for 4 years.",
   about: [
     {
-      me: "Have extensive experience in Front-end development for projects based on the Shopware 6 and Pimcore CMS, as well as on VueJs. Also have experience in e-commerce development in Germany and Ukraine.",
+      me: "Extensive experience in Front-end development using Shopware 6, Pimcore CMS, and Vue.js. Skilled in e-commerce development in Germany and Ukraine.",
       involved: [
         {
-          title:
-            "I was directly involved in communicating with clients on the following topics:",
+          title: "Direct involvement in client communications, including:",
           details: [
             "Presenting products to clients",
-            "Calling to get their product suggestions",
-            "Training clients to work with the developed/modified functionality",
+            "Collecting client product suggestions",
+            "Training clients to use developed or modified functionality",
           ],
         },
       ],
       partners:
-        "I also repeatedly communicated with partner companies on issues of developing new functionality based on their developments, making edits and suggestions to improve the operation of their system.",
+        "Regular collaboration with partner companies to develop new features, suggest improvements, and refine their systems.",
       presentations:
-        "I was involved in studying and presenting new technologies for the company, in particular, implementing work with Shopware 6 and the associated Vue Storefront.",
+        "Researched and presented new technologies to the company, including the implementation of Shopware 6 and Vue Storefront.",
     },
   ],
   skills: [
