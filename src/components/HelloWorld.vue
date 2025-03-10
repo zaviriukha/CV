@@ -62,7 +62,7 @@ const data = ref({
           details: [
             "Development and  maintained websites based on shopware 6",
             "Developed custom modules for Shopware 6",
-            "Vue Storefront",
+            "Analysis of the possible use of Vue Storefront in new projects",
           ],
         },
         {
