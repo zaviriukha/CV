@@ -133,6 +133,10 @@ const data = ref({
     "Ukrainian – Native",
     "Russian – Fluent",
   ],
+  certification: [
+    "Pimcore – Pimcore Developer, 2024",
+    "Shopware 6 – Shopware Developer, 2021",
+  ],
 });
 </script>
 
@@ -228,6 +232,13 @@ const data = ref({
           <p class="font-bold">{{ edu.degree }}</p>
           <p>{{ edu.institution }} ({{ edu.period }})</p>
         </div>
+      </div>
+    </section>
+
+    <section class="mb-8 flex justify-between">
+      <h3 class="text-xl font-semibold w-1/6 text-left">Certifications</h3>
+      <div class="flex text-left w-5/6 flex-col">
+        <p v-for="certif in data.certification" :key="certif">{{ certif }}</p>
       </div>
     </section>
 
