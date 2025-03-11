@@ -1,7 +1,7 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import Cv from "./components/cv.vue";
 </script>
 
 <template>
-  <HelloWorld msg="CV" />
+  <Cv msg="CV" />
 </template>
