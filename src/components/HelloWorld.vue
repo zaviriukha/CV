@@ -11,9 +11,9 @@ const data = ref({
   name: "Zaviriukha Valeriia",
   position: "Front-End Developer (Vue.js)",
   contact: {
-    email: "v.zaviriukha@gmail.com",
-    phone: "(097) 170 70 30",
     git: "https://github.com/zaviriukha",
+    email: "v.zaviriukha@gmail.com",
+    phone: "(097) 170-70-30",
   },
   summary:
     "Over 6 years of professional experience in Front-end development. For over 2 years have been doing front-end development based on the Vue.js framework. Prior to that, worked on the development of sites for CMS ModX Revolution for 4 years.",
@@ -140,37 +140,41 @@ const data = ref({
 </script>
 
 <template>
-  <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg text-black">
-    <header class="mb-8 text-left border-b-2 border-black">
-      <h1 class="text-4xl font-bold">{{ data.name }}</h1>
-      <h2 class="text-2xl">{{ data.position }}</h2>
+  <div
+    class="max-w-4xl mx-auto lg:p-8 p-0 bg-white lg:shadow-lg lg:rounded-lg text-black overflow-hidden"
+  >
+    <header
+      class="md:mb-8 mb-5 text-left border-b-2 border-black justify-between flex md:pb-5 pb-4"
+    >
+      <div>
+        <h1 class="md:text-5xl text-4xl font-bold">{{ data.name }}</h1>
+        <h2 class="md:text-2xl text-xl">{{ data.position }}</h2>
+      </div>
+      <div class="contact md:flex hidden">
+        <div class="flex flex-col items-start">
+          <p>
+            <span class="font-bold">Git</span>:
+            <a href="{{ data.contact.git }}">{{ data.contact.git }}</a>
+          </p>
+          <p>
+            <span class="font-bold">Email</span>:
+            <a :href="'mailto:' + data.contact.email" class="text-black">{{
+              data.contact.email
+            }}</a>
+          </p>
+          <p><span class="font-bold">Phone</span>: {{ data.contact.phone }}</p>
+        </div>
+      </div>
     </header>
 
-    <section class="mb-8 contact flex justify-between">
-      <div class="w-1/6 text-left">
-        <h3 class="text-xl font-semibold">Contact</h3>
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Summary</h3>
       </div>
-      <div class="flex flex-col items-start w-2/6">
-        <p>
-          <span class="font-bold">Email</span>:
-          <a :href="'mailto:' + data.contact.email" class="text-blue-500">{{
-            data.contact.email
-          }}</a>
-        </p>
-        <p><span class="font-bold">Phone</span>: {{ data.contact.phone }}</p>
-        <p>
-          <span class="font-bold">Git</span>:
-          <a href="{{ data.contact.git }}">{{ data.contact.git }}</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-8 flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Summary</h3>
       <div
         v-for="me in data.about"
         :key="me.me"
-        class="flex flex-col text-left w-5/6"
+        class="flex flex-col text-left md:w-5/6 w-full"
       >
         <p class="mb-5">{{ me.me }}</p>
         <template v-for="(involve, index) in me.involved" :key="index">
@@ -190,18 +194,22 @@ const data = ref({
       </div>
     </section>
 
-    <section class="mb-8 flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Professional Skills</h3>
-      <div class="flex text-left w-5/6">
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Professional Skills</h3>
+      </div>
+      <div class="flex text-left md:w-5/6 w-full">
         <ul class="list-disc pl-5">
           <li v-for="skill in data.skills" :key="skill">{{ skill }}</li>
         </ul>
       </div>
     </section>
 
-    <section class="mb-8 flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Work Experience</h3>
-      <div class="flex text-left w-5/6 flex-col">
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Work Experience</h3>
+      </div>
+      <div class="flex text-left md:w-5/6 w-full flex-col">
         <div v-for="job in data.experience" :key="job.company" class="mb-4">
           <h4 class="text-lg font-semibold">
             {{ job.position }} - {{ job.company }}
@@ -224,9 +232,11 @@ const data = ref({
       </div>
     </section>
 
-    <section class="mb-8 flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Education</h3>
-      <div class="flex text-left w-5/6 flex-col">
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Education</h3>
+      </div>
+      <div class="flex text-left md:w-5/6 w-full flex-col">
         <div v-for="edu in data.education" :key="edu.degree">
           <p class="font-bold">{{ edu.degree }}</p>
           <p>{{ edu.institution }} ({{ edu.period }})</p>
@@ -234,17 +244,42 @@ const data = ref({
       </div>
     </section>
 
-    <section class="mb-8 flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Certifications</h3>
-      <div class="flex text-left w-5/6 flex-col">
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Certifications</h3>
+      </div>
+      <div class="flex text-left md:w-5/6 w-full flex-col">
         <p v-for="certif in data.certification" :key="certif">{{ certif }}</p>
       </div>
     </section>
 
-    <section class="flex justify-between">
-      <h3 class="text-xl font-semibold w-1/6 text-left">Languages</h3>
-      <div class="flex text-left w-5/6 flex-col">
+    <section class="mb-8 flex justify-between md:flex-row flex-col">
+      <div class="lg:w-1/6 md:w-2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Languages</h3>
+      </div>
+      <div class="flex text-left md:w-5/6 w-full flex-col">
         <p v-for="lang in data.languages" :key="lang">{{ lang }}</p>
+      </div>
+    </section>
+
+    <section
+      class="contact justify-between md:hidden flex md:flex-row flex-col"
+    >
+      <div class="lg:w-1/6 md:2/6 text-left md:mb-0 mb-2.5">
+        <h3 class="text-xl font-semibold">Contact</h3>
+      </div>
+      <div class="flex flex-col items-start md:w-5/6 w-full">
+        <p>
+          <span class="font-bold">Email</span>:
+          <a :href="'mailto:' + data.contact.email" class="text-black">{{
+            data.contact.email
+          }}</a>
+        </p>
+        <p><span class="font-bold">Phone</span>: {{ data.contact.phone }}</p>
+        <p>
+          <span class="font-bold">Git</span>:
+          <a href="{{ data.contact.git }}">{{ data.contact.git }}</a>
+        </p>
       </div>
     </section>
   </div>
