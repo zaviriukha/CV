@@ -1,5 +1,6 @@
-# Vue 3 + Vite
+Extensive experience in Front-end development using Shopware 6, Pimcore CMS, and Vue.js. Skilled in e-commerce development in Germany and Ukraine.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Direct involvement in client communications, including - presenting products to clients, collecting client product suggestions, training clients to use developed or modified functionality.
+Regular collaboration with partner companies to develop new features, suggest improvements, and refine their systems.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Researched and presented new technologies to the company, including the implementation of Shopware 6 and Vue Storefront.
